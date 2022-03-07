@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kalkulatorku</title>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Kalkulatorku</h1>
+
+      <form action="" id="formulir">
+        <div class="inputan">
+          <label for="a1">
+            Angka 1 &nbsp;: <input type="text" id="a1" name="a1" /> </label
+          ><br />
+          <label for="a2">
+            Angka 2 :
+            <input type="text" id="a2" name="a2" /> </label
+          ><br />
+          <label for="hasil">
+            Hasil &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+            <input type="text" id="hasil" name="hasil" disabled />
+          </label>
+        </div>
+        <div class="operator">
+          <button type="button" onclick="hitung('+')">+</button>
+          <button type="button" onclick="hitung('-')">-</button>
+          <button type="button" onclick="hitung('x')">x</button>
+          <button type="button" onclick="hitung('/')">/</button>
+          <button type="button" onclick="hitung('^')">^</button>
+          <button type="button" onclick="reset()">Batal</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
