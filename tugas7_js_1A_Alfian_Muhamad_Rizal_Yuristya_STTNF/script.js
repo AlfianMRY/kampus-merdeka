@@ -28,8 +28,8 @@ class Gempa {
 function tambahList() {
   let frm = document.getElementById("formGempa");
   let lokasi = frm.lokasi.value;
-  let skala = parseFloat(frm.skala.value);
-  if ((skala = "" || lokasi == "" || isNaN(skala))) {
+  let skala = frm.skala.value;
+  if (skala == "" || lokasi == "" || isNaN(skala)) {
     alert("Semua data harus di isi dengan benar!");
   } else {
     let tambah = new Gempa(lokasi, skala);
