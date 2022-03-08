@@ -29,8 +29,6 @@ function tambahList() {
   let frm = document.getElementById("formGempa");
   let lokasi = frm.lokasi.value;
   let skala = parseFloat(frm.skala.value);
-  console.log(lokasi);
-  console.log(skala);
   if ((skala = "" || lokasi == "" || isNaN(skala))) {
     alert("Semua data harus di isi dengan benar!");
   } else {
