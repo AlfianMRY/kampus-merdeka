@@ -25,19 +25,38 @@ class Gempa {
 }
 
 // Nilai Dari Form
-function tambahList() {
+function tambahList(lok, skal) {
   let frm = document.getElementById("formGempa");
   let lokasi = frm.lokasi.value;
   let skala = frm.skala.value;
+
+  // Cara 1
+  // if (skala == "" || lokasi == "" || isNaN(skala)) {
+  //   alert("Semua data harus di isi dengan benar!");
+  // } else {
+  //   let tambah = new Gempa(lokasi, skala);
+  //   tambah.dampak();
+  // }
+
+  // Cara 2
   if (skala == "" || lokasi == "" || isNaN(skala)) {
-    alert("Semua data harus di isi dengan benar!");
+    if (lok == "" || skal == "") {
+      alert("Semua data harus di isi dengan benar!");
+    } else {
+      let tambah1 = new Gempa(lok, skal);
+      tambah1.dampak();
+    }
   } else {
     let tambah = new Gempa(lokasi, skala);
     tambah.dampak();
   }
 }
 
-// Nilai Manual
+// Cara 2
+tambahList("Indonesia", 1);
+tambahList("jakarta", 4);
+
+// Nilai Manual Cara 1
 let gempa1 = new Gempa("Indonesia", 1);
 let gempa2 = new Gempa("Ukraina", 8);
 let gempa3 = new Gempa("Rusia", 4);
