@@ -6,12 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+
+    <link href="asset/css/bootstrap.min.css" rel="stylesheet" />
 
     <title>Layouting Bootstrap</title>
   </head>
@@ -160,7 +156,7 @@
     </div>
 
     <div class="row mt-4 justify-content-evenly">
-      <div class="col-md-3">
+      <div class="col-md-2">
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
@@ -184,11 +180,7 @@
               <div class="accordion-body">
                 <strong>This is the first item's accordion body.</strong> It is
                 shown by default, until the collapse plugin adds the appropriate
-                classes that we use to style each element. These classes control
-                the overall appearance, as well as the showing and hiding via
-                CSS transitions. You can modify any of this with custom CSS or
-                overriding our default variables. It's also worth noting that
-                just about any HTML can go within the
+
                 <code>.accordion-body</code>, though the transition does limit
                 overflow.
               </div>
@@ -260,62 +252,190 @@
           </div>
         </div>
       </div>
-      <div
-        class="col-md-5 justify-content-evenly border border-2 rounded-3 p-2"
-      >
-        <h2 class="text-center">Galery</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card my-2" style="height: fit-content">
-              <img
-                src="https://source.unsplash.com/300x150?programmer"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+      <div class="col-md-7">
+        <!-- Tabs navs -->
+        <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a
+              onclick="tabs1()"
+              class="nav-link active"
+              id="ex3-tab-1"
+              data-mdb-toggle="tab"
+              href="#ex3-tabs-1"
+              role="tab"
+              aria-controls="ex3-tabs-1"
+              aria-selected="true"
+              >Link 1</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              onclick="tabs2()"
+              class="nav-link"
+              id="ex3-tab-2"
+              data-mdb-toggle="tab"
+              href="#ex3-tabs-2"
+              role="tab"
+              aria-controls="ex3-tabs-2"
+              aria-selected="false"
+              >Link 2</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              onclick="tabs3()"
+              class="nav-link"
+              id="ex3-tab-3"
+              data-mdb-toggle="tab"
+              href="#ex3-tabs-3"
+              role="tab"
+              aria-controls="ex3-tabs-3"
+              aria-selected="false"
+              >Link 3</a
+            >
+          </li>
+        </ul>
+        <!-- Tabs navs -->
+
+        <!-- Tabs content -->
+        <div class="tab-content" id="ex2-content">
+          <div
+            class="tab-pane fade show active"
+            id="ex3-tabs-1"
+            role="tabpanel"
+            aria-labelledby="ex3-tab-1"
+          >
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    Accordion Item #1
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the first item's accordion body.
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="card my-2" style="height: fit-content">
-              <img
-                src="https://source.unsplash.com/300x150?programmer"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    Accordion Item #2
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the second item's accordion body. Let's imagine this being
+                    filled with some actual content.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    Accordion Item #3
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the third item's accordion body. Nothing more exciting
+                    happening here in terms of content, but just filling up the
+                    space to make it look, at least at first glance, a bit more
+                    representative of how this would look in a real-world
+                    application.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="card my-2" style="height: fit-content">
+          <div
+            class="tab-pane fade"
+            id="ex3-tabs-2"
+            role="tabpanel"
+            aria-labelledby="ex3-tab-2"
+          >
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="ex3-tabs-3"
+            role="tabpanel"
+            aria-labelledby="ex3-tab-3"
+          >
+            <div class="card" style="height: fit-content">
               <img
-                src="https://source.unsplash.com/300x150?programmer"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card my-2" style="height: fit-content">
-              <img
-                src="https://source.unsplash.com/300x150?programmer"
+                src="https://source.unsplash.com/700x300?computer"
                 class="card-img-top"
                 alt="..."
               />
@@ -330,8 +450,9 @@
             </div>
           </div>
         </div>
+        <!-- Tabs content -->
       </div>
-      <div class="col-md-3">
+      <div class="col-md-2">
         <form action="" class="border border-2 rounded-3 p-3">
           <h2>Login</h2>
           <div class="my-3">
@@ -369,19 +490,54 @@
       </div>
     </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function tabs1() {
+        var tabs1 = document.getElementById("ex3-tabs-1");
+        var tab1 = document.getElementById("ex3-tab-1");
+        var tabs2 = document.getElementById("ex3-tabs-2");
+        var tab2 = document.getElementById("ex3-tab-2");
+        var tabs3 = document.getElementById("ex3-tabs-3");
+        var tab3 = document.getElementById("ex3-tab-3");
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
+        tabs1.classList.add("show", "active");
+        tabs2.classList.remove("show", "active");
+        tabs3.classList.remove("show", "active");
+        tab1.classList.add("active");
+        tab2.classList.remove("active");
+        tab3.classList.remove("active");
+      }
+      function tabs2() {
+        var tabs1 = document.getElementById("ex3-tabs-1");
+        var tab1 = document.getElementById("ex3-tab-1");
+        var tabs2 = document.getElementById("ex3-tabs-2");
+        var tab2 = document.getElementById("ex3-tab-2");
+        var tabs3 = document.getElementById("ex3-tabs-3");
+        var tab3 = document.getElementById("ex3-tab-3");
+
+        tabs1.classList.remove("show", "active");
+        tabs2.classList.add("show", "active");
+        tabs3.classList.remove("show", "active");
+        tab1.classList.remove("active");
+        tab2.classList.add("active");
+        tab3.classList.remove("active");
+      }
+      function tabs3() {
+        var tabs1 = document.getElementById("ex3-tabs-1");
+        var tab1 = document.getElementById("ex3-tab-1");
+        var tabs2 = document.getElementById("ex3-tabs-2");
+        var tab2 = document.getElementById("ex3-tab-2");
+        var tabs3 = document.getElementById("ex3-tabs-3");
+        var tab3 = document.getElementById("ex3-tab-3");
+
+        tabs1.classList.remove("show", "active");
+        tabs2.classList.remove("show", "active");
+        tabs3.classList.add("show", "active");
+        tab1.classList.remove("active");
+        tab2.classList.remove("active");
+        tab3.classList.add("active");
+      }
+    </script>
   </body>
 </html>
